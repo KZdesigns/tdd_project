@@ -30,3 +30,23 @@ describe 'my_uniq' do
         expect{my_uniq(array)}.to_not change{array}
     end
 end
+
+describe 'two_sum' do 
+    let(:array) { [-5, -3, 1, 3] }
+    let(:one_zero) { [3, 0, 4] }
+    let(:two_zeros) { [3, 0, 4, 0] }
+
+    it "finds a zero-sum pair" do 
+        expect(two_sum(array)).to eq([1, 3])
+    end
+
+    it "is not confused by a single zero" do
+        expect(two_sum(one_zero)).to eq([])
+    end
+
+
+    it "handles two zeros" do
+        expect(two_sum(two_zeros)).to eq([])
+    end
+
+end
