@@ -48,5 +48,23 @@ describe 'two_sum' do
     it "handles two zeros" do
         expect(two_sum(two_zeros)).to eq([])
     end
-
 end
+
+
+describe "transpose" do
+    it "transposes a matrix" do
+        matrix = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8]
+        ]
+
+        expect(my_transpose(matrix)).to eq([
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8]
+        ])
+    end
+end
+
+

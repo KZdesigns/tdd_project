@@ -27,3 +27,22 @@ def two_sum(array)
 
     sum_indicies.sort
 end
+
+def my_transpose(matrix)
+    trans = []
+    inner = []
+    
+    (0...matrix.length).each do |i|
+        (0...matrix.length).each do |j|
+            inner.length == 3 ? next : inner << matrix[j][i]
+        end
+
+        trans << inner
+        inner = []
+    end
+
+    trans
+end
+
+
+
