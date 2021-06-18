@@ -68,3 +68,27 @@ describe "transpose" do
 end
 
 
+# Stock Picker
+# Write a method that takes an array of stock prices (prices on days 0, 1, ...), 
+# and outputs the most profitable pair of days on which to first buy the stock and then sell the stock. 
+# Remember, you can't sell stock before you buy it!
+
+describe 'stock_picker' do
+
+    it "finds a simple pair" do
+        expect(stock_picker([1, 2, 4, 0, 6, 9])).to eq([3, 5])
+    end
+
+    it "finds a better pair after an inferior pair" do
+        expect(stock_picker([3, 2, 5, 0, 6])).to eq([3, 4])
+    end
+
+    it "does not buy stocks in a crash" do
+        expect(stock_picker([5, 4, 3, 2, 1])).to be_nil
+    end
+end
+
+
+
+
+
